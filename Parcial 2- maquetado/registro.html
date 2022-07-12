@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+        <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <img src="IMG/logo.png" class="navbar-brand img-fluid" style="height: 7.5rem;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#uno">
+            <!-- este es el icono del menu de navegacion -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="uno">
+            <ul class="navbar-nav navbar-center  mb-2 mb-lg-0 mx-sm-auto justify-content-around">
+                <li class="nav-item text-sm-center text-lg-left">
+                    <a class="nav-link active h5" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item text-sm-center text-lg-left">
+                    <a class="nav-link h5" href="personal.html">Nuestro Staff</a>
+                </li>
+                <li class="nav-item text-sm-center text-lg-left">
+                    <a class="nav-link h5" href="pasos.html">¿Cómo funciona?</a>
+                </li>
+                <li class="nav-item text-sm-center text-lg-left">
+                    <a class="nav-link h5" href="Articulo.html">Articulo</a>
+                </li>
+            </ul>
+            <form class="d-flex justify-content-sm-center justify-content-lg-start mr-3 mb-sm-3 mb-lg-0 mx-sm-auto">
+                <a href="registro.html" class="btn btn-lg btn-primary ">Comenzar</a>
+            </form>
+            <form class="d-flex justify-content-sm-center justify-content-lg-start mr-3 mb-sm-3 mb-lg-0 mx-sm-auto">
+                <a href="index.html#planes" class="btn btn-lg btn-success">Planes</a>
+            </form>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12 col-lg-10 m-auto">
+                <div class="card bg-success-dark border-success p-5">
+                    <div class="row">
+                        <div class="col-10">
+                            <h3 class="text-white offset-1">Registro</h3>
+                            <h6 class="text-white offset-1">Para comenzar necesitamos conocerte un poco más</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-white border-success-pasto">
+                    <div class="row">
+                        <div class="col-11">
+                            <form action="" method="post">
+                                <div class="row mt-3 mb-3 offset-1">
+                                    <div class="col-6">
+                                        <label for="nombre">Nombre:</label>
+                                        <input type="text" name="nombre" id="nombre" class="form-control"
+                                            placeholder="Nombre">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="apellido">Apellido:</label>
+                                        <input type="text" name="apellido" id="apellido" class="form-control"
+                                            placeholder="Apellido">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3 offset-1">
+                                    <div class="col-6">
+                                        <label for="fecha">Fecha de nacimiento:</label>
+                                        <input type="date" name="fecha" id="fecha" class="form-control"
+                                            placeholder="dd/mm/yyyy">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="pais">País</label>
+                                        <select name="pais" id="pais" class="form-control">
+                                            <option value="1" selected>Argentina</option>
+                                            <option value="2">Peru</option>
+                                            <option value="3">Venezuela</option>
+                                            <option value="4">Paraguay</option>
+                                            <option value="5">Uruguay</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3 offset-1">
+                                    <div class="col-6">
+                                        <label for="area">Código de area</label>
+                                        <select name="area" id="area" class="form-control">
+                                            <option value="1" selected>+54</option>
+                                            <option value="2">12</option>
+                                            <option value="3">32</option>
+                                            <option value="4">81</option>
+                                            <option value="5">31</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="telefono">Telefono:</label>
+                                        <input type="text" name="telefono" id="telefono" class="form-control"
+                                            placeholder="Telefono">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3 offset-1">
+                                    <div class="col-6">
+                                        <label for="email">Email:</label>
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3 offset-1">
+                                    <div class="col-6">
+                                        <label for="contraseña">Contraseña:</label>
+                                        <input type="password" name="contraseña" id="contraseña"
+                                            class="form-control" placeholder="Contraseña">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="repassword">Repetir contraseña:</label>
+                                        <input type="password" name="repassword" id="repassword"
+                                            class="form-control" placeholder="Repetir contraseña">
+                                    </div>
+                                </div>
+                                <div class="row mt-5 mb-3 offset-1">
+                                    <div class="col-6">
+                                        <a href="#" class="d-inline">Acepto los terminos y condiciones de uso</a>
+                                        <input type="checkbox" class="check d-inline" name="condiciones"
+                                            id="condiciones">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="button" class="btn btn-success-pasto btn-block"
+                                            value="Registrar" data-toggle="modal" data-target="#mimodal">
+                                    </div>
+                                    <div class="modal fade" id="mimodal" tabindex="-1" role="dialog"
+                                        aria-labelledby="mimodal" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Registro
+                                                        exitoso</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Elegí un profesional que te sea de confianza y pacta una
+                                                        sección con ella</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a href="seleccion.html"
+                                                        class="btn btn-lg btn-outline-primary">Continuar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+  
+    <footer class="bg-secondary text-center text-white mt-3">
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+                <!-- Twitter -->
+                <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+                <!-- Google -->
+                <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+                <!-- Instagram -->
+                <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+                <!-- Linkedin -->
+                <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <!-- Github -->
+                <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #74b781;">
+            © 2020 Copyright:
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Navbar -->
+    <script src="JS/jquery-3.5.1.slim.min.js"></script>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

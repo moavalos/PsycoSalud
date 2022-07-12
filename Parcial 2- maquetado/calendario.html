@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Calendario</title>
+  <link rel="stylesheet" href="CSS/bootstrap.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/materia/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/estilos.css">
+  <link href="CSS/fullcalendar.min.css" rel='stylesheet' />
+  <link href="CSS/fullcalendar.print.min.css" rel='stylesheet' media='print' />
+  <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
+
+  <script src="JS/moment.min.js"></script>
+  <script src="JS/jquery-3.4.1.min.js"></script>
+  <script src="JS/fullcalendar.min.js"></script>
+  <script type="text/javascript" src="JS/calendario.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <img src="IMG/logo.png" class="navbar-brand img-fluid" style="height: 7.5rem;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#uno">
+            <!-- este es el icono del menu de navegacion -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="uno">
+            <ul class="navbar-nav navbar-center  mb-2 mb-lg-0 mx-sm-auto justify-content-around">
+                <li class="nav-item text-sm-center text-lg-left">
+                    <a class="nav-link active h5" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item text-sm-center text-lg-left">
+                    <a class="nav-link h5" href="personal.html">Nuestro Staff</a>
+                </li>
+                <li class="nav-item text-sm-center text-lg-left">
+                    <a class="nav-link h5" href="pasos.html">¿Cómo funciona?</a>
+                </li>
+                <li class="nav-item text-sm-center text-lg-left">
+                    <a class="nav-link h5" href="Articulo.html">Articulo</a>
+                </li>
+            </ul>
+            <form class="d-flex justify-content-sm-center justify-content-lg-start mr-3 mb-sm-3 mb-lg-0 mx-sm-auto">
+                <a href="registro.html" class="btn btn-lg btn-primary ">Comenzar</a>
+            </form>
+            <form class="d-flex justify-content-sm-center justify-content-lg-start mr-3 mb-sm-3 mb-lg-0 mx-sm-auto">
+                <a href="index.html#planes" class="btn btn-lg btn-success">Planes</a>
+            </form>
+        </div>
+    </div>
+</nav>
+  <main>
+    <div class="container-fluid bg-success">
+      <div class="row">
+        <div class="col">
+          <h1 class="mt-5 mb-3 text-center">Elegí un horario y solicita un encuentro con XXXX</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div id='calendar' class="mb-3"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="modal fade" id="schedule-add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Horarios
+                    disponibles en el día de xxxx</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row mt-3">
+                    <div class="col">
+                      <p class="h4">10:00</p>
+                    </div>
+                    <div class="col">
+                      <p class="text-danger">Ocupado</p>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col">
+                      <p class="h4">12:00</p>
+                    </div>
+                    <div class="col">
+                      <button class="btn btn-outline-success">Disponible</button>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col">
+                      <p class="h4">14:00</p>
+                    </div>
+                    <div class="col">
+                      <p class="text-danger">Ocupado</p>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col">
+                      <p class="h4">16:00</p>
+                    </div>
+                    <div class="col">
+                      <button class="btn btn-success">Disponible <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                          height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                          <path
+                            d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                        </svg> </button>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col">
+                      <p class="h4">18:00</p>
+                    </div>
+                    <div class="col">
+                      <p class="text-danger">Ocupado</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-lg btn-outline-secondary" data-dismiss="modal">Regresar</button>
+                  <button type="button" class="btn btn-lg btn-outline-primary">Solicitar encuentro</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="seccion">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Sección con el doctor Cheems</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>Recorda que a las 14:00hs tenes una cita con el doctor Cheems via zoom </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        <a href="IMG/Cheems.jpg" class="btn btn-success">Ir a la reunión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-secondary text-center text-white">
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i
+            class="fab fa-facebook-f"></i></a>
+        <!-- Twitter -->
+        <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+        <!-- Google -->
+        <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+        <!-- Instagram -->
+        <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+        <!-- Linkedin -->
+        <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i
+            class="fab fa-linkedin-in"></i></a>
+        <!-- Github -->
+        <a class="btn btn-outline-primary btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: #74b781;">
+      © 2020 Copyright:
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+
+  <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+  <script src="JS/popper.min.js"></script>
+  <script src="JS/bootstrap.min.js"></script>
+</body>
+
+</html>
